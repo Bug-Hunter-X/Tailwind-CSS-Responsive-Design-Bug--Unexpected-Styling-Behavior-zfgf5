@@ -1,0 +1,10 @@
+This bug occurs when using Tailwind CSS with complex responsive design setups.  It manifests as styles not applying correctly, or unexpectedly applying on certain screen sizes, even when the Tailwind directives appear correct.
+
+```html
+<div class="md:grid grid-cols-2 gap-4">
+  <div class="bg-blue-500 p-4">Column 1</div>
+  <div class="bg-red-500 p-4">Column 2</div>
+</div>
+```
+
+This *should* create a 2-column grid on medium screens and larger, but might not work due to specificity issues with other stylesheets or conflicting Tailwind classes.
