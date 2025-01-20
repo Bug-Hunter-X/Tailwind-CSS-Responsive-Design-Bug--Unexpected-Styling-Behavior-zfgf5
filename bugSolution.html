@@ -1,0 +1,12 @@
+The solution involves carefully managing class specificity and potentially utilizing Tailwind's `@layer` directives for better control over the CSS layering.
+
+```html
+<div class="container mx-auto">
+  <div class="md:grid grid-cols-2 gap-4">
+    <div class="bg-blue-500 p-4">Column 1</div>
+    <div class="bg-red-500 p-4">Column 2</div>
+  </div>
+</div>
+```
+
+Adding a container with `mx-auto` provides a more predictable layout across different screen sizes, resolving some unexpected behavior by ensuring the grid aligns correctly.  If issues persist after this change, investigating other CSS rules that might be conflicting is recommended.
